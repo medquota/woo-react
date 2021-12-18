@@ -6,6 +6,7 @@ import {DEFAULT_PRODUCT_HOME_IMG_URL} from "../constants/urls";
 
 const Product = ( props ) => {
 	const { product } = props;
+	console.log(product,'product')
 
 	return (
 		// @TODO Need to handle Group products differently.
@@ -30,7 +31,6 @@ const Product = ( props ) => {
 					<h3 className="product-title mt-3 font-medium text-gray-800">
 						{ product.name ? product.name : '' }
 					</h3>
-					<div className="product-description text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: (product?.description)}}/>
 					<Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>
 					<AddToCartButton product={ product }/>
 				</div>

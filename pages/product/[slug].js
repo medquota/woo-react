@@ -9,6 +9,7 @@ import Price from "../../src/components/single-product/price";
 
 export default function Product(props) {
 	const { product } = props;
+    console.log(props,'props')
 
     const router = useRouter()
 
@@ -39,6 +40,8 @@ export default function Product(props) {
 						</div>
 						<div className="product-info">
 							<h4 className="products-main-title text-2xl uppercase">{ product.name }</h4>
+                            <Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>
+							<AddToCartButton product={ product }/>
 							<div
 
 								dangerouslySetInnerHTML={ {
@@ -46,8 +49,7 @@ export default function Product(props) {
 								} }
 								className="product-description mb-5"
 							/>
-                            <Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>
-							<AddToCartButton product={ product }/>
+
 						</div>
 					</div>
 
