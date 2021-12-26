@@ -123,3 +123,55 @@ body {
     border-radius: 4px;
   }
 }
+.single-post {
+  text-align: center;
+  .post-main-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+    @media only screen and (min-width: 600px) {
+      font-size: 40px;
+    }
+  }
+  .post-description {
+    margin-top: 20px;
+  }
+  @media only screen and (min-width: 600px) {
+    .post-images {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      width: 40%;
+    }
+  }
+}
+.footer-text {
+  text-align: center;
+}
+.social-links {
+  text-align: center;
+  display: inline-flex;
+  @media only screen and (min-width: 600px) {
+    display: flex;
+  }
+}
+.policy {
+  text-align: center;
+  .page-content {
+    li {
+      margin-top: 30px;
+    }
+  }
+}
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  .nav-bag {
+    position: relative;
+    left: 100px;
+    right: 0;
+    bottom: 10px;
+  }
+}
