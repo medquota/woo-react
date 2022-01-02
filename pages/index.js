@@ -13,16 +13,20 @@ export default function Home(props) {
       {/*Hero Carousel*/}
       <HeroCarousel heroCarousel={heroCarousel} />
       {/*Categories*/}
-      <div className="product-categories-container container mx-auto my-32 px-4 xl:px-0">
+      <div className="product-categories-container container mx-auto mt-24 px-4 xl:px-0">
+        <div class="my-5">
+          <img
+            width="100%"
+            src="https://www.naturalpetcare.us/wp-content/uploads/2022/01/1641025500_New-Year-8.png"
+          />
+        </div>
         <h2 className="main-title text-xl mb-5 uppercase">
-          <span className="main-title-inner">
-            Save your moneys with super promotion EveryDay!
-          </span>
+          <span className="main-title-inner">Super promotion EveryDay!</span>
         </h2>
         <ParentCategoriesBlock productCategories={productCategories} />
       </div>
       {/*Products*/}
-      <div className="products container mx-auto my-32 px-4 xl:px-0">
+      <div className="products container mx-auto mt-5 px-4 xl:px-0">
         <h2 className="products-main-title main-title mb-5 text-xl uppercase">
           <span className="main-title-inner">Top Rated Items This Week</span>
         </h2>

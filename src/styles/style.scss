@@ -1,3 +1,7 @@
+// colors
+.bg-orange {
+  background-color: #f15004;
+}
 body {
   width: 100%;
 }
@@ -168,6 +172,7 @@ nav {
   position: fixed;
   top: 0;
   z-index: 9999;
+  width: 100%;
   .nav-bag {
     position: relative;
     left: 100px;
