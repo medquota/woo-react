@@ -5,7 +5,7 @@ export default function Shipping() {
     <Layout>
       <div className="policy policy-container container mx-auto my-32 px-4 xl:px-0">
         <h1 className="text-2xl mb-5 uppercase">Shipping Policy</h1>
-        <div class="page-content">
+        <div className="page-content">
           <ol>
             <li>
               By placing the order on our store, you accept our shipping/return

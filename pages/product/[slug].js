@@ -12,7 +12,6 @@ import Price from "../../src/components/single-product/price";
 
 export default function Product(props) {
   const { product } = props;
-  console.log(props, "props");
 
   const router = useRouter();
 
@@ -25,7 +24,7 @@ export default function Product(props) {
   return (
     <Layout>
       {product ? (
-        <div className="single-product container mx-auto my-32 px-4 xl:px-0">
+        <div className="single-product container mx-auto my-32 xl:px-0">
           <div className="grid md:grid-cols-2 gap-4">
             <div className="product-images">
               {!isEmpty(product?.galleryImages?.nodes) ? (
@@ -40,7 +39,7 @@ export default function Product(props) {
                 />
               ) : null}
             </div>
-            <div className="product-info">
+            <div className="product-info text-center">
               <h4 className="products-main-title text-2xl uppercase">
                 {product.name}
               </h4>
@@ -51,13 +50,18 @@ export default function Product(props) {
               <AddToCartButton product={product} />
             </div>
           </div>
-          <div className="grid md:grid-cols-1 gap-4"></div>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: product.description,
-            }}
-            className="product-description mb-5"
-          />
+          <div className="bg-gray px-2 text-center mt-10">
+            <div className="border-blue-extraDark font-bold mb-5">
+              {" "}
+              Description
+            </div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: product.description,
+              }}
+              className="product-description mb-5"
+            />
+          </div>
         </div>
       ) : (
         ""

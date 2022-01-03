@@ -1,7 +1,7 @@
 import { Facebook, Instagram, Twitter, Youtube } from "./icons";
 
 const Footer = () => (
-  <div className="footer bg-gray-800 p-6 text-white">
+  <footer className="footer bg-blue p-6 text-white">
     <div className="container mx-auto">
       <div className="footer-text flex-none md:flex items-center justify-between">
         <p>Copyright © 2022 - MedQuota LTD.</p>
@@ -41,7 +41,7 @@ const Footer = () => (
         </ul>
       </div>
     </div>
-  </div>
+  </footer>
 );
 
 export default Footer;

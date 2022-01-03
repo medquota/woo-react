@@ -5,7 +5,6 @@ import GET_CATEGORIES_QUERY from "../src/queries/get-categories";
 
 export default function Categories(props) {
   const { productCategories } = props;
-  console.log("cate");
 
   return (
     <Layout>

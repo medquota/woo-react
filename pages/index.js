@@ -13,29 +13,31 @@ export default function Home(props) {
       {/*Hero Carousel*/}
       <HeroCarousel heroCarousel={heroCarousel} />
       {/*Categories*/}
-      <div className="product-categories-container container mx-auto mt-24 px-4 xl:px-0">
-        <div class="my-5">
-          <img
-            width="100%"
-            src="https://www.naturalpetcare.us/wp-content/uploads/2022/01/1641025500_New-Year-8.png"
-          />
+      <div className="homepage">
+        <div className="product-categories-container container mx-auto mt-24 px-4 xl:px-0">
+          <div className="my-5">
+            <img
+              width="100%"
+              src="https://www.naturalpetcare.us/wp-content/uploads/2022/01/1641025500_New-Year-8.png"
+            />
+          </div>
+          <h2 className="main-title text-xl mb-5 uppercase">
+            <span className="main-title-inner">Super promotion EveryDay!</span>
+          </h2>
+          <ParentCategoriesBlock productCategories={productCategories} />
         </div>
-        <h2 className="main-title text-xl mb-5 uppercase">
-          <span className="main-title-inner">Super promotion EveryDay!</span>
-        </h2>
-        <ParentCategoriesBlock productCategories={productCategories} />
-      </div>
-      {/*Products*/}
-      <div className="products container mx-auto mt-5 px-4 xl:px-0">
-        <h2 className="products-main-title main-title mb-5 text-xl uppercase">
-          <span className="main-title-inner">Top Rated Items This Week</span>
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
-          {products.length
-            ? products.map((product) => (
-                <Product key={product.id} product={product} />
-              ))
-            : ""}
+        {/*Products*/}
+        <div className="products container mx-auto mt-5 px-4 xl:px-0">
+          <h2 className="products-main-title main-title mb-5 text-xl uppercase">
+            <span className="main-title-inner">Top Rated Items This Week</span>
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
+            {products.length
+              ? products.map((product) => (
+                  <Product key={product.id} product={product} />
+                ))
+              : ""}
+          </div>
         </div>
       </div>
     </Layout>

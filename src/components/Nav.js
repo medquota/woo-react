@@ -6,13 +6,13 @@ const Nav = () => {
   const [isMenuVisible, setMenuVisibility] = useState(false);
 
   return (
-    <nav className="bg-white p-4">
+    <nav className="bg-blue p-4">
       <div className="flex items-center justify-between flex-wrap container mx-auto">
         {/*Menu button*/}
         <div className="block lg:hidden">
           <button
             onClick={() => setMenuVisibility(!isMenuVisible)}
-            className="flex items-center px-3 py-2 border rounded text-black border-black hover:text-black hover:border-black"
+            className="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white"
           >
             <svg
               className="fill-current h-3 w-3"
@@ -24,7 +24,7 @@ const Nav = () => {
             </svg>
           </button>
         </div>
-        <div className="flex items-center flex-shrink-0 text-black mr-20">
+        <div className="flex items-center flex-shrink-0 text-white mr-20">
           <svg
             className="fill-current h-8 w-8 mr-2"
             width="54"
@@ -52,27 +52,27 @@ const Nav = () => {
         >
           <div className="text-sm font-medium uppercase lg:flex-grow">
             <Link href="/">
-              <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+              <a className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-10">
                 Home
               </a>
             </Link>
             <Link href="/categories">
-              <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+              <a className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-10">
                 Shop
               </a>
             </Link>
             <Link href="/posts">
-              <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+              <a className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-10">
                 Blog
               </a>
             </Link>
             <Link href="/shipping">
-              <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+              <a className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-10">
                 Shipping
               </a>
             </Link>
             <Link href="https://www.pilore.com/contact-us/">
-              <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+              <a className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-10">
                 Contact US
               </a>
             </Link>
