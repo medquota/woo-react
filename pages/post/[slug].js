@@ -6,7 +6,7 @@ import { isEmpty } from "lodash";
 
 export default function Post(props) {
   const { post } = props;
-
+  console.log(post.content,'post.content')
   const router = useRouter();
 
   // If the page is not yet generated, this will be displayed

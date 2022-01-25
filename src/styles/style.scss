@@ -20,6 +20,9 @@ body {
     min-height: 85vh;
   }
 }
+.homepage{
+  margin-top: 100px;
+}
 
 .product {
   img {
@@ -207,3 +210,7 @@ nav {
     width: 50px;
   }
 }
+iframe{
+  width: 100%;
+}
+.product-discount{display: none;}

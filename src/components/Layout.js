@@ -14,7 +14,7 @@ Router.events.on("routeChangeError", () => NProgress.done());
 const Layout = (props) => {
   let title;
   let description;
-
+    console.log(props);
   if (
     props &&
     props.children[1] &&
