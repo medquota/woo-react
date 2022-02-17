@@ -1,5 +1,6 @@
 import Layout from "../../src/components/Layout";
 import { useRouter } from "next/router";
+import Link from "next/link";
 import client from "../../src/components/ApolloClient";
 import AddToCartButton from "../../src/components/cart/AddToCartButton";
 import {
@@ -22,9 +23,9 @@ export default function Product(props) {
   }
 
   return (
-    <Layout>
+    <Layout product={product}>
       {product ? (
-        <div className="single-product container mx-auto my-32 xl:px-0">
+        <div className="single-product container mx-auto my-32 xl:px-0 p-2">
           <div className="grid md:grid-cols-2 gap-4">
             <div className="product-images">
               {!isEmpty(product?.galleryImages?.nodes) ? (
@@ -47,7 +48,45 @@ export default function Product(props) {
                 salesPrice={product?.price}
                 regularPrice={product?.regularPrice}
               />
+              {product?.attributes?.nodes?.map((item, index) => {
+                return (
+                  <div className="variation p-2 mb-2">
+                    <label className="block hidden">{item.label}: </label>
+                    <select className="">
+                      <option className="">{item.label}</option>;
+                      {item.options.map((key) => {
+                        return <option className="">{key}</option>;
+                      })}
+                    </select>
+                  </div>
+                );
+              })}
+
               <AddToCartButton product={product} />
+              <div className="delivery-policy">
+                <div className="delivery-policy-title">
+                  Delivery &amp; Return Policy
+                </div>
+                <p>Delivered to:Worldwide</p>
+                <ul className="zoo-extend-cart-info">
+                  <li className="zoo-extend-cart-info-item delivery-return-block">
+                    <Link href="/shipping">
+                      <a className="block cl-orange mb-2 lg:inline-block lg:mt-0 underline ">
+                        Shipping and Return Policy
+                      </a>
+                    </Link>
+                  </li>
+                </ul>
+                <p>Returns:Accepted</p>
+                <p>Exceptions may apply</p>
+              </div>
+              <div className="cl-blue">Guarantee Safe Checkout</div>
+              <div className="wrap-logo-payments">
+                <img
+                  src="https://pilore.com/wp-content/uploads/2021/11/Capture-décran-le-2021-11-03-à-17.39.23.png?t=1635957576668"
+                  alt="Guarantee safe checkout"
+                />
+              </div>
             </div>
           </div>
           <div className="bg-gray px-2 text-center mt-10">

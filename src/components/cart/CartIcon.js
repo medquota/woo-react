@@ -11,7 +11,7 @@ const CartIcon = () => {
 
   return (
     <Link href="/cart">
-      <a className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-10">
+      <a className="block lg:inline-block lg:mt-0 text-white hover:text-white ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className=" lg:block m-auto"

@@ -1,15 +1,24 @@
 // colors
 .bg-orange {
-  background-color: #f15004;
+  background-color: #ff904d;
 }
 .bg-blue {
-  background-color: #007eb2;
+  background-color: #00adef;
 }
 .bg-gray {
   background-color: #f5f5f5;
 }
 .border-blue-extraDark {
   border-bottom: 1px solid #11293b7a;
+}
+.cl-orange {
+  color: #ff904d;
+}
+.cl-blue {
+  color: #00adef;
+}
+.cursor-pointer {
+  cursor: pointer;
 }
 body {
   width: 100%;
@@ -20,7 +29,7 @@ body {
     min-height: 85vh;
   }
 }
-.homepage{
+.homepage {
   margin-top: 100px;
 }
 
@@ -53,7 +62,6 @@ body {
   flex-direction: column;
   &__title {
     line-height: 1.2;
-    max-width: 254px;
   }
   &__description {
     margin-top: 10px;
@@ -69,12 +77,18 @@ body {
   position: relative;
   height: 400px;
 }
-
+.banner-img,
+.banner-content {
+  @media only screen and (min-width: 600px) {
+    width: 50%;
+  }
+  width: 100%;
+}
 .slider-button {
   position: absolute;
   bottom: 0;
   right: 0;
-  background: #fff;
+  //background: #fff;
   padding: 10px 20px;
   font-size: 24px;
 }
@@ -85,7 +99,11 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+.single-product {
+  .product-description {
+    word-break: break-all;
+  }
+}
 .categories,
 .cart,
 .checkout {
@@ -194,12 +212,6 @@ nav {
   top: 0;
   z-index: 9999;
   width: 100%;
-  .nav-bag {
-    position: relative;
-    left: 100px;
-    right: 0;
-    bottom: 10px;
-  }
 }
 .cart-products th,
 .cart-products td {
@@ -210,7 +222,65 @@ nav {
     width: 50px;
   }
 }
-iframe{
+iframe {
   width: 100%;
 }
-.product-discount{display: none;}
+.product-discount {
+  display: none;
+}
+.policy-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+//contact US
+.formInput {
+  border: 1px solid;
+  padding: 10px;
+  margin: 10px;
+  width: 70%;
+}
+.submit-btn {
+  padding: 10px;
+  background-color: #ff904d;
+  color: white;
+  width: 22%;
+}
+.social-links {
+  margin-right: 40px;
+}
+.delivery-policy {
+  background-color: #f5f5f5;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+.delivery-policy p,
+ul,
+li {
+  color: black;
+  margin: 0;
+  text-align: center;
+}
+.delivery-policy-title {
+  color: black;
+  font-weight: bold;
+  background-color: #e5e5e5;
+  margin-bottom: 10px;
+}
+.delivery-policy .zoo-extend-cart-info {
+  justify-content: center;
+  margin: 0;
+}
+.delivery-policy .zoo-extend-cart-info li {
+  margin: 0;
+}
+.variation {
+  select {
+    width: 50%;
+    padding: 6px;
+    border: 1px solid #222;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}

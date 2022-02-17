@@ -16,7 +16,6 @@ const AddToCart = (props) => {
     clientMutationId: v4(), // Generate a unique id.
     productId: product.productId,
   };
-
   const [cart, setCart] = useContext(AppContext);
   const [showViewCart, setShowViewCart] = useState(false);
   const [requestError, setRequestError] = useState(null);

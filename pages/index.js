@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Layout from "../src/components/Layout";
 import Product from "../src/components/Product";
 import client from "../src/components/ApolloClient";
@@ -6,26 +7,27 @@ import PRODUCTS_AND_CATEGORIES_QUERY from "../src/queries/product-and-categories
 import HeroCarousel from "../src/components/home/hero-carousel";
 
 export default function Home(props) {
-  const { products, productCategories, heroCarousel } = props || {};
-
+  const { products, productCategories, posts } = props || {};
   return (
     <Layout>
-      {/*Hero Carousel*/}
-      <HeroCarousel heroCarousel={heroCarousel} />
       {/*Categories*/}
       <div className="homepage">
         <div className="product-categories-container container mx-auto mt-24 px-4 xl:px-0">
           <div className="my-5">
-            <img
-              width="100%"
-              src="https://www.naturalpetcare.us/wp-content/uploads/2022/01/1641025500_New-Year-8.png"
-            />
+            <Link href="/categories">
+              <img
+                width="100%"
+                src="https://www.pilore.com/wp-content/uploads/2022/02/2.jpeg"
+              />
+            </Link>
           </div>
           <h2 className="main-title text-xl mb-5 uppercase">
             <span className="main-title-inner">Super promotion EveryDay!</span>
           </h2>
           <ParentCategoriesBlock productCategories={productCategories} />
         </div>
+        {/*Hero Carousel*/}
+        <HeroCarousel posts={posts} />
         {/*Products*/}
         <div className="products container mx-auto mt-5 px-4 xl:px-0">
           <h2 className="products-main-title main-title mb-5 text-xl uppercase">
@@ -54,6 +56,7 @@ export async function getStaticProps() {
       productCategories: data?.productCategories?.nodes
         ? data.productCategories.nodes
         : [],
+      posts: data?.posts?.nodes || [],
       products: data?.products?.nodes ? data.products.nodes : [],
       heroCarousel: data?.heroCarousel?.nodes[0]?.children?.nodes
         ? data.heroCarousel.nodes[0].children.nodes

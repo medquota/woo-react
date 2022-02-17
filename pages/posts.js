@@ -7,7 +7,7 @@ export default function Posts(props) {
   const { posts } = props;
 
   return (
-    <Layout>
+    <Layout posts={posts}>
       <div className="posts posts-container container mx-auto my-32 px-4 xl:px-0">
         <h1 className="text-center text-2xl mb-5 uppercase">Blogs</h1>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">

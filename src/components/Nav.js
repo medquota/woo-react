@@ -6,8 +6,8 @@ const Nav = () => {
   const [isMenuVisible, setMenuVisibility] = useState(false);
 
   return (
-    <nav className="bg-blue p-4">
-      <div className="flex items-center justify-between flex-wrap container mx-auto">
+    <nav className="bg-blue px-4 py-2">
+      <div className="flex items-center justify-between container mx-auto flex-wrap">
         {/*Menu button*/}
         <div className="block lg:hidden">
           <button
@@ -24,24 +24,18 @@ const Nav = () => {
             </svg>
           </button>
         </div>
-        <div className="flex items-center flex-shrink-0 text-white mr-20">
-          <svg
-            className="fill-current h-8 w-8 mr-2"
-            width="54"
-            height="54"
-            viewBox="0 0 54 54"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
-          </svg>
-          <span className="font-semibold text-xl tracking-tight">
+        <div className="flex items-center flex-shrink-0 text-white">
+          <div className="font-semibold text-xl tracking-tight mb-1 mr-3">
             <Link href="/">
-              <a className="">MedQuota</a>
+              <img
+                className="cursor-pointer fill-current h-8 mr-2"
+                src="https://www.pilore.com/wp-content/uploads/2022/02/LOGO.png"
+              />
             </Link>
-          </span>
-          <div className="nav-bag lg:hidden text-sm font-medium">
-            <CartIcon />
           </div>
+        </div>
+        <div className="flex nav-bag lg:hidden text-sm font-medium mb-6">
+          <CartIcon />
         </div>
 
         {/*MMenu in mobile*/}
@@ -50,7 +44,7 @@ const Nav = () => {
             isMenuVisible ? "max-h-full h-full" : "h-0"
           } w-full overflow-hidden lg:h-full flex-grow lg:flex lg:items-center lg:w-auto`}
         >
-          <div className="text-sm font-medium uppercase lg:flex-grow">
+          <div className="text-sm font-medium uppercase lg:flex-grow ">
             <Link href="/">
               <a className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-10">
                 Home
@@ -66,12 +60,12 @@ const Nav = () => {
                 Blog
               </a>
             </Link>
-            <Link href="/shipping">
+            <Link href="/policies">
               <a className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-10">
-                Shipping
+                Policies
               </a>
             </Link>
-            <Link href="https://www.pilore.com/contact-us/">
+            <Link href="/contact-us">
               <a className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-10">
                 Contact US
               </a>
